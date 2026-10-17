@@ -90,8 +90,8 @@ curl "http://localhost:3000/api/v1/libros?limite=5&orden=titulo&cursor=<siguient
 Ejemplo de creación:
 
 ```bash
-curl -X POST http://localhost:3000/api/v1/libros \\
-  -H "Content-Type: application/json" \\
+curl -X POST http://localhost:3000/api/v1/libros \
+  -H "Content-Type: application/json" \
   -d '{"titulo":"Mi libro","autor":"Roberth","anio":2026,"paginas":120}'
 ```
 
@@ -110,8 +110,8 @@ En `src/trpc/router.ts`, con los mismos esquemas del contrato y el mismo servici
 curl 'http://localhost:3000/trpc/libros.listar?input=%7B%22limite%22%3A3%7D'
 
 # mutación
-curl -X POST http://localhost:3000/trpc/libros.crear \\
-  -H "Content-Type: application/json" \\
+curl -X POST http://localhost:3000/trpc/libros.crear \
+  -H "Content-Type: application/json" \
   -d '{"titulo":"Creado con tRPC","autor":"Roberth","anio":2026,"paginas":50}'
 ```
 
